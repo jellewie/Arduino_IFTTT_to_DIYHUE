@@ -30,8 +30,8 @@ void IFTTT_loop() {
   IFTTT_server.handleClient();
 }
 void IFTTT_handle_Register() {
-  //URL argument names like "<IP>/Register?mac=<value>"
-  //Example                 "192.168.1.128/Register?mac=00:0a:95:9d:68:16"
+  //URL argument names like "<IP>/register?mac=<value>"
+  //Example                 "192.168.1.128/register?mac=00:0a:95:9d:68:16"
 
   for (int i = 0; i < IFTTT_server.args(); i++) {
     String IFTTT_ArguName = IFTTT_server.argName(i);
