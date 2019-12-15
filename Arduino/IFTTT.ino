@@ -41,7 +41,7 @@ void IFTTT_handle_Register() {
     if (IFTTT_ArguName == "mac") {
       DIYHUE_Register(IFTTT_ArgValue);
       IFTTT_server.send(200, "text/plain", "Succesfull send register mac='" + IFTTT_ArgValue);
-      return;
+      IFTTT_server.send(422, "text/plain", "'mac' missing mac='" + IFTTT_ArgValue + "'");
     }
   }
 }
