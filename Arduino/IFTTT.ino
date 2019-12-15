@@ -77,7 +77,7 @@ void IFTTT_handle_Set() {
   } else if (IFTTT_ReturnStatus == 0)
     IFTTT_ReturnStatus = 422;  //Return this error as default
 
-  IFTTT_server.send(IFTTT_ReturnStatus, "text/plain", "'" + String(IFTTT_ReturnMSG) + "' mac='" + IFTTT_mac + "' id='" + String(IFTTT_ID) + "'");
+  IFTTT_server.send(IFTTT_ReturnStatus, "text/plain", String(IFTTT_ReturnMSG) + " mac='" + IFTTT_mac + "' id='" + String(IFTTT_ID) + "'");
   return;
 }
 void IFTTT_HandleNotFound() {
